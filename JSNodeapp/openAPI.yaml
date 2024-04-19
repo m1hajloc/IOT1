@@ -1,0 +1,183 @@
+openapi: 3.0.0
+info:
+  title: Temperature reading API
+  version: 1.0.0
+  description: API for managing temperature reading data
+paths:
+  /getTemperatureReading/{id}:
+    get:
+      summary: Get temperature reading value by ID
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+          required: true
+          description: ID of the Temperature reading value to retrieve
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TemperatureReadingValue'
+        '400':
+          description: Invalid ObjectId format
+        '404':
+          description: Temperature reading with the specified ID not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Poruka'
+        '500':
+          description: Internal server error
+  /createTemperatureReading:
+    post:
+      summary: Add temperature reading value
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TemperatureReadingValueCreate'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Poruka'
+        '500':
+          description: Internal server error
+  /deleteTemperatureReading/{id}:
+    delete:
+      summary: Delete Temperature reading  by ID
+      description: Deletes Temperature reading data with the specified ID.
+      parameters:
+        - in: path
+          name: id
+          description: ID of the temperature reading to delete
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Invalid ObjectId format
+        '404':
+          description: Temperature reading not found
+        '500':
+          description: Internal Server Error
+  /updateTemperatureReading:
+    put:
+      summary: Update temperature reading value by ID
+      description: Update temperature reading data with the specified ID.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TemperatureReadingValue'
+      responses:
+        '200':
+          description: Updated correctly
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Poruka'
+        '404':
+          description: temperature reading with the specified ID not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Poruka'
+        '400':
+          description: temperature reading with invalid id
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Poruka'
+        '500':
+          description: Internal Server Error
+  /aggregationTemperatureReading:
+    get:
+      summary: Perform temperature reading aggregation
+      parameters:
+        - in: query
+          name: startTimestamp
+          schema:
+            type: string
+          required: true
+          description: Start timestamp for aggregation
+        - in: query
+          name: endTimestamp
+          schema:
+            type: string
+          required: true
+          description: End timestamp for aggregation
+        - in: query
+          name: fieldName
+          schema:
+            type: string
+          required: true
+          description: Name of the field to aggregate
+        - in: query
+          name: operation
+          schema:
+            type: string
+          required: true
+          description: Aggregation operation (min, max, avg, sum)
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AggregationValue'
+        '400':
+          description: Invalid argument for aggregation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Poruka'
+        '500':
+          description: Internal server error
+components:
+  schemas:
+    TemperatureReadingValue:
+      type: object
+      properties:
+        Id:
+          type: string
+        NotedDate:
+          type: string
+        OutIn:
+          type: string
+        RoomId:
+          type: string
+        Temp:
+          type: integer
+    Poruka:
+      type: object
+      properties:
+        Text:
+          type: string
+   
+    AggregationValue:
+      type: object
+      properties:
+        Result: 
+          type: number
+    TemperatureReadingValueCreate:
+      type: object
+      properties:
+        NotedDate:
+          type: string
+        OutIn:
+          type: string
+        RoomId:
+          type: string
+        Temp:
+          type: integer
+

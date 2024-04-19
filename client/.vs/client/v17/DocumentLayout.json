@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\mihaj\\OneDrive\\Desktop\\IOT1\\client\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{10775871-22E8-4CF6-9D7E-5606EEDDA526}|client\\client.csproj|c:\\users\\mihaj\\onedrive\\desktop\\iot1\\client\\client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10775871-22E8-4CF6-9D7E-5606EEDDA526}|client\\client.csproj|solutionrelative:client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10775871-22E8-4CF6-9D7E-5606EEDDA526}|client\\client.csproj|c:\\users\\mihaj\\onedrive\\desktop\\iot1\\client\\client\\protos\\temperature.proto||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{10775871-22E8-4CF6-9D7E-5606EEDDA526}|client\\client.csproj|solutionrelative:client\\protos\\temperature.proto||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10775871-22E8-4CF6-9D7E-5606EEDDA526}|client\\client.csproj|c:\\users\\mihaj\\onedrive\\desktop\\iot1\\client\\client\\client.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{10775871-22E8-4CF6-9D7E-5606EEDDA526}|client\\client.csproj|solutionrelative:client\\client.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "temperature.proto",
+              "DocumentMoniker": "C:\\Users\\mihaj\\OneDrive\\Desktop\\IOT1\\client\\client\\Protos\\temperature.proto",
+              "RelativeDocumentMoniker": "client\\Protos\\temperature.proto",
+              "ToolTip": "C:\\Users\\mihaj\\OneDrive\\Desktop\\IOT1\\client\\client\\Protos\\temperature.proto",
+              "RelativeToolTip": "client\\Protos\\temperature.proto",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003853|",
+              "WhenOpened": "2024-04-19T12:30:00.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "client.csproj",
+              "DocumentMoniker": "C:\\Users\\mihaj\\OneDrive\\Desktop\\IOT1\\client\\client\\client.csproj",
+              "RelativeDocumentMoniker": "client\\client.csproj",
+              "ToolTip": "C:\\Users\\mihaj\\OneDrive\\Desktop\\IOT1\\client\\client\\client.csproj",
+              "RelativeToolTip": "client\\client.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-04-18T13:28:37.959Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\mihaj\\OneDrive\\Desktop\\IOT1\\client\\client\\Program.cs",
+              "RelativeDocumentMoniker": "client\\Program.cs",
+              "ToolTip": "C:\\Users\\mihaj\\OneDrive\\Desktop\\IOT1\\client\\client\\Program.cs",
+              "RelativeToolTip": "client\\Program.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAgwC8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-18T13:28:21.433Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

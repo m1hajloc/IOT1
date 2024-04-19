@@ -1,0 +1,45 @@
+syntax = "proto3";
+import "google/protobuf/empty.proto";
+
+option csharp_namespace = "GrpcService1";
+
+package temperature;
+
+
+service Temperature {
+
+	rpc CreateTemperatureReading(TemperatureReading) returns (Poruka);	
+	rpc GetTemperatureReading(ReadingId) returns (TemperatureReading);
+    rpc UpdateTemperatureReading(TemperatureReading) returns (Poruka);
+    rpc DeleteTemperatureReading(ReadingId) returns (google.protobuf.Empty);
+    rpc AggregationTemperatureReading(AggregationRequest) returns (AggregationValue);
+
+
+}
+
+message ReadingId {
+	string _id=1;
+}
+
+message TemperatureReading {
+    string _id = 1;
+    string room_id = 2;
+    string noted_date = 3;
+    double temp = 4;
+    string out_in = 5;
+}
+
+message Poruka {
+	string Text = 1;
+}
+
+message AggregationRequest {
+  string start_timestamp = 1;
+  string end_timestamp = 2;
+  string operation = 3;
+  string field_name = 4;
+}
+
+message AggregationValue{
+    double result = 1;
+}
